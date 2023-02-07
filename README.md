@@ -2,7 +2,7 @@
 
 Install airflow with Docker-compose
 
-Requirement
+Requirements:
 
 - docker
 - docker-compose
@@ -27,6 +27,8 @@ docker-compose up airflow-init
 # 6. Run docker-compose
 docker-compose up
 
+# 7. Close running system
+docker-compose down
 ```
 
 Open a new terminal
@@ -51,7 +53,8 @@ docker exec container_ID airflow version
 ```
 
 Open a browser and type localhost:8080
-![brower](/docs/locahost.png)
+
+![sbrowser](/docs/locahost.png)
 
 Youtube tutorial  
 [Running Airflow 2.0 with Docker in 5mins - Data with Marc](https://www.youtube.com/watch?v=ataytcxy2ck&ab_channel=datawithmarc)
