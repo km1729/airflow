@@ -16,7 +16,7 @@ def greet(name, age):
 
 with DAG(
     default_args=default_args,
-    dag_id='python_operator_v1',
+    dag_id='python_operator_v2',
     description='python operator test',
     start_date=datetime(2023,7,7,1),
     schedule_interval='@daily'
@@ -24,5 +24,6 @@ with DAG(
 ) as dag:
     task1 = PythonOperator(
         task_id='greet',
-        python_callable=greet #python function
+        python_callable=greet, #python function
+        op_kwargs={'name':'tom', 'age':15}
     )
