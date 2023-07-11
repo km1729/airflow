@@ -13,6 +13,8 @@ default_args = {
      schedule_interval='@daily')
 def hello_wrold_etl():
 
+    # 딕셔너리로 아웃풋을 가져와 타스크에서 사용
+
     @task(multiple_outputs=True)
     def get_name():
         return {
